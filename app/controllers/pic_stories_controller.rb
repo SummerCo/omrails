@@ -36,7 +36,7 @@ class PicStoriesController < ApplicationController
 
   # GET /pic_stories/1/edit
   def edit
-    @pic_story = PicStory.find(params[:id])
+    @pic_story =current_user.pic_stories.find(params[:id])
   end
 
   # POST /pic_stories
@@ -58,7 +58,7 @@ class PicStoriesController < ApplicationController
   # PUT /pic_stories/1
   # PUT /pic_stories/1.json
   def update
-    @pic_story = PicStory.find(params[:id])
+    @pic_story = current_user.pic_stories.find(params[:id])
 
     respond_to do |format|
       if @pic_story.update_attributes(params[:pic_story])
@@ -74,7 +74,7 @@ class PicStoriesController < ApplicationController
   # DELETE /pic_stories/1
   # DELETE /pic_stories/1.json
   def destroy
-    @pic_story = PicStory.find(params[:id])
+    @pic_story = current_user.pic_stories.find(params[:id])
     @pic_story.destroy
 
     respond_to do |format|

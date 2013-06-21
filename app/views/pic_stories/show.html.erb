@@ -6,7 +6,12 @@
 
   <%= @pic_story.Story %>
    </p>
+   <p>
+   	<%= @pic_story.user.name%>
+   </p>
+   <% if current_user == @pic_story.user %>
   <%= link_to 'Edit', edit_pic_story_path(@pic_story) %> |
+  <% end %>
   <%= link_to 'Back', pic_stories_path %>
 
 	</div>
