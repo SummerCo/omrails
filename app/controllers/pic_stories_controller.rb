@@ -26,7 +26,7 @@ class PicStoriesController < ApplicationController
   # GET /pic_stories/new
   # GET /pic_stories/new.json
   def new
-    @pic_story = PicStory.new
+    @pic_story = current_user.pic_stories.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,7 +42,7 @@ class PicStoriesController < ApplicationController
   # POST /pic_stories
   # POST /pic_stories.json
   def create
-    @pic_story = PicStory.new(params[:pic_story])
+    @pic_story = current_user.pic_stories.new(params[:pic_story])
 
     respond_to do |format|
       if @pic_story.save
