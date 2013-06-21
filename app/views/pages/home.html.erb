@@ -1,11 +1,15 @@
+<% if user_signed_in? %>
+	<h1> You're Logged In </h1>
+<% else %>
+
 <div class="hero-unit">
-<h2>Welcome to One Click Limit!</h1>
+<h2>Welcome to One Click Limit! <img src="ocllogo2.gif" alt = "One Click Limit Logo" height = "42" width ="42"></h1>
 <p>You've found the home page for the
 	<%= link_to "One Click Limit" , "http://onemonthrails.com" %>
 	 application. 
 </p>
 <p> 
-	<%= link_to "Sign Up Now", "#" , class: "btn btn-success btn-large" %>
+	<%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-success btn-large" %>
 </p>
 </div>
-
+<% end %>
