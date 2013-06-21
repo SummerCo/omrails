@@ -1,0 +1,21 @@
+<h1>Listing PicStories</h1>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Story</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<thead>
+
+<tbody>
+ <%= render @pic_stories %>
+
+<tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Pic story', new_pic_story_path %>

@@ -1,0 +1,2 @@
+module PicStoriesHelper
+end

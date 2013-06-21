@@ -1,4 +1,7 @@
 Omrails::Application.routes.draw do
+  resources :pic_stories
+
+
   devise_for :views
 
   devise_for :users
