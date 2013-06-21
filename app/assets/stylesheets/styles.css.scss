@@ -1,0 +1,23 @@
+$headingsFontFamily:'Petit Formal Script', cursive;
+@import url(http://fonts.googleapis.com/css?family=Petit+Formal+Script);
+
+$navbarBackgroundHighlight: rgba(102, 205, 94, 0.9);
+$headingsColor: rgba(113, 67, 231, 0.9);
+$heroUnitLeadColor: rgba(113, 67, 231, 0.9);
+$navbarBrandColor: rbga(255, 126, 81, 0.9);
+$navbarBrandFont:'Petit Formal Script', cursive;
+$btnPrimaryBackground: rgba(102, 205, 94, 0.9);  
+@import 'bootstrap';
+
+body {
+	padding-top: 60px;
+}
+@import 'bootstrap-responsive';
+
+.footer {
+	margin-top: 50px;
+	color: $grayLight;
+	a {
+		color: $gray;
+	}
+}
